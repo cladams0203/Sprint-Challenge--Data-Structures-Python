@@ -76,3 +76,19 @@ print (f"runtime: {end_time2 - start_time2} seconds")
 # Python has built-in tools that allow for a very efficient approach to this problem
 # What's the best time you can accomplish?  Thare are no restrictions on techniques or data
 # structures, but you may not import any additional libraries that you did not write yourself.
+
+#---------Stretch with a Dictionary-------------
+start_time3 = time.time()
+
+name_dictionary = {}
+duplicates3 = []
+for i in names_1:
+    name_dictionary[i] = True
+for i in names_2:
+    if i in name_dictionary:
+        duplicates3.append(i)
+
+end_time3 = time.time()
+
+print (f"{len(duplicates3)} duplicates:\n\n{', '.join(duplicates3)}\n\n")
+print (f"runtime: {end_time3 - start_time3} seconds")
